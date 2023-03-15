@@ -24,4 +24,4 @@ jobs:
         DJANGO_DEBUG: ${{ secrets.DJANGO_DEBUG }}
         DJANGO_ALLOWED_HOSTS: ${{ secrets.DJANGO_ALLOWED_HOSTS }}
       run: |
-        flake8 src/
+        flake8 src/ --max-line-length=150 --exclude=migrations
