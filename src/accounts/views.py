@@ -10,7 +10,7 @@ from django.urls import reverse_lazy
 from django.views.generic import CreateView, FormView
 from django.views.generic import UpdateView
 
-from .forms import UserRegisterForm, UserUpdateForm, UserActivateAgainForm
+from .forms import UserActivateAgainForm, UserRegisterForm, UserUpdateForm
 from .utils import signer
 
 

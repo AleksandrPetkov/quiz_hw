@@ -78,8 +78,8 @@ class UserUpdateForm(UserChangeForm):
             'avatar'
         )
 
-
         # widgets = {'birthday': forms.DateInput(attrs={'type': 'date'})}
+
 
 class UserActivateAgainForm(forms.Form):
     email = forms.EmailField(required=True)
