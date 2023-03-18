@@ -1,8 +1,7 @@
-from accounts.forms import UserRegisterForm, UserActivateAgainForm
+from accounts.forms import UserActivateAgainForm, UserRegisterForm
+from accounts.models import User
 
 from django.test import TestCase
-
-from accounts.models import User
 
 
 class TestForms(TestCase):
