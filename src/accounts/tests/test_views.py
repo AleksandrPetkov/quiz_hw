@@ -9,7 +9,7 @@ from django.urls import reverse
 class TestViews(TestCase):
     def setUp(self):
         self.data = {
-            'username': 'user_1',
+            'username': 'user',
             'password1': '456dsfadfs',
             'password2': '456dsfadfs',
             'email': 'user@gmail.com'
@@ -58,3 +58,25 @@ class TestViews(TestCase):
         user.refresh_from_db()
         self.assertTrue(user.is_active)
         self.assertTrue(user.is_activated)
+
+
+class TestUserLoginView(TestCase):
+    def setUp(self):
+        self.client = Client()
+        self.url = reverse('accounts:login')
+
+    def test_run_template(self):
+        response = self.client.get(self.url)
+        self.assertTemplateUsed(response, 'accounts/user_login.html')
+
+
+class TestUserLogoutView(TestCase):
+    def setUp(self):
+        self.client = Client()
+        self.url = reverse('accounts:logout')
+
+    def test_run_template(self):
+        User.objects.create_user(username='user', password='456dsfadfs')
+        self.client.login(username='user', password='456dsfadfs')
+        response = self.client.post(self.url)
+        self.assertTemplateUsed(response, 'accounts/user_logout.html')
