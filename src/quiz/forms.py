@@ -13,6 +13,23 @@ class QuestionInlineFormSet(forms.BaseInlineFormSet):
                 f'to {self.instance.QUESTION_MAX_LIMIT} inclusive'
             )
 
+        order_nums_list = [form.instance.order_num for form in self.forms]
+
+        for i, order_num in enumerate(order_nums_list):
+
+            if not (1 <= order_num <= self.instance.QUESTION_MAX_LIMIT):
+                raise ValidationError(
+                    f'Question num must be from 1 to {self.instance.QUESTION_MAX_LIMIT} inclusive.'
+                )
+            if i == 0 and order_num != 1:
+                raise ValidationError(
+                    'First question num must be 1.'
+                )
+            elif i != 0 and order_num - order_nums_list[i - 1] != 1:
+                raise ValidationError(
+                    'Question num must increment 1 from previous.'
+                )
+
 
 class ChoiceInlineFormSet(forms.BaseInlineFormSet):
     def clean(self):
