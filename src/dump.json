@@ -1,0 +1,1025 @@
+[
+{
+   "model": "quiz.exam",
+   "pk": 1,
+   "fields": {
+      "create_timestamp": "2023-03-19T07:01:32.058Z",
+      "update_timestamp": "2023-03-19T11:25:43.224Z",
+      "uuid": "ab7667d4-6e65-4f7a-a25a-f574e60bfe1b",
+      "title": "Математика",
+      "description": "Маленький тест по математике",
+      "level": 2
+   }
+},
+{
+   "model": "quiz.exam",
+   "pk": 2,
+   "fields": {
+      "create_timestamp": "2023-03-19T11:32:15.391Z",
+      "update_timestamp": "2023-03-19T11:32:15.392Z",
+      "uuid": "c46bbfda-3ebd-40ae-b290-ab9f340550f8",
+      "title": "География",
+      "description": "Как хорошо вы знаете географию Европы? Сколько столиц стран Европы вы сможете назвать верно?",
+      "level": 0
+   }
+},
+{
+   "model": "quiz.exam",
+   "pk": 3,
+   "fields": {
+      "create_timestamp": "2023-03-19T11:44:25.481Z",
+      "update_timestamp": "2023-03-19T11:44:25.481Z",
+      "uuid": "6e068fe4-5c20-453a-9fd3-e5ed2fa0bb0b",
+      "title": "Знание фильмов",
+      "description": "Уверены, что можете считать себя киноманом? Пройдите тест и проверьте свои знания по известным фильмам!",
+      "level": 2
+   }
+},
+{
+   "model": "quiz.question",
+   "pk": 1,
+   "fields": {
+      "create_timestamp": "2023-03-19T07:03:21.700Z",
+      "update_timestamp": "2023-03-19T07:03:21.700Z",
+      "exam": 1,
+      "order_num": 1,
+      "text": "2+2=?",
+      "image": ""
+   }
+},
+{
+   "model": "quiz.question",
+   "pk": 2,
+   "fields": {
+      "create_timestamp": "2023-03-19T07:03:34.033Z",
+      "update_timestamp": "2023-03-19T07:03:51.575Z",
+      "exam": 1,
+      "order_num": 3,
+      "text": "4+4=?",
+      "image": ""
+   }
+},
+{
+   "model": "quiz.question",
+   "pk": 3,
+   "fields": {
+      "create_timestamp": "2023-03-19T07:04:02.792Z",
+      "update_timestamp": "2023-03-19T07:04:02.793Z",
+      "exam": 1,
+      "order_num": 2,
+      "text": "3+3=?",
+      "image": ""
+   }
+},
+{
+   "model": "quiz.question",
+   "pk": 4,
+   "fields": {
+      "create_timestamp": "2023-03-19T11:32:15.392Z",
+      "update_timestamp": "2023-03-19T11:32:15.393Z",
+      "exam": 2,
+      "order_num": 1,
+      "text": "Столица Австрии",
+      "image": ""
+   }
+},
+{
+   "model": "quiz.question",
+   "pk": 5,
+   "fields": {
+      "create_timestamp": "2023-03-19T11:32:15.393Z",
+      "update_timestamp": "2023-03-19T11:32:15.393Z",
+      "exam": 2,
+      "order_num": 2,
+      "text": "Столица Бельгии",
+      "image": ""
+   }
+},
+{
+   "model": "quiz.question",
+   "pk": 6,
+   "fields": {
+      "create_timestamp": "2023-03-19T11:32:15.393Z",
+      "update_timestamp": "2023-03-19T11:32:15.394Z",
+      "exam": 2,
+      "order_num": 3,
+      "text": "Столица Великобритании",
+      "image": ""
+   }
+},
+{
+   "model": "quiz.question",
+   "pk": 7,
+   "fields": {
+      "create_timestamp": "2023-03-19T11:32:15.394Z",
+      "update_timestamp": "2023-03-19T11:32:15.394Z",
+      "exam": 2,
+      "order_num": 4,
+      "text": "Столица Германии",
+      "image": ""
+   }
+},
+{
+   "model": "quiz.question",
+   "pk": 8,
+   "fields": {
+      "create_timestamp": "2023-03-19T11:32:15.394Z",
+      "update_timestamp": "2023-03-19T11:32:15.394Z",
+      "exam": 2,
+      "order_num": 5,
+      "text": "Столица Ирландии",
+      "image": ""
+   }
+},
+{
+   "model": "quiz.question",
+   "pk": 9,
+   "fields": {
+      "create_timestamp": "2023-03-19T11:32:15.395Z",
+      "update_timestamp": "2023-03-19T11:32:15.395Z",
+      "exam": 2,
+      "order_num": 6,
+      "text": "Столица Лихтенштейна",
+      "image": ""
+   }
+},
+{
+   "model": "quiz.question",
+   "pk": 10,
+   "fields": {
+      "create_timestamp": "2023-03-19T11:32:15.395Z",
+      "update_timestamp": "2023-03-19T11:32:15.395Z",
+      "exam": 2,
+      "order_num": 7,
+      "text": "Столица Люксембурга",
+      "image": ""
+   }
+},
+{
+   "model": "quiz.question",
+   "pk": 11,
+   "fields": {
+      "create_timestamp": "2023-03-19T11:32:15.395Z",
+      "update_timestamp": "2023-03-19T11:32:15.395Z",
+      "exam": 2,
+      "order_num": 8,
+      "text": "Столица Монако",
+      "image": ""
+   }
+},
+{
+   "model": "quiz.question",
+   "pk": 12,
+   "fields": {
+      "create_timestamp": "2023-03-19T11:32:15.396Z",
+      "update_timestamp": "2023-03-19T11:32:15.396Z",
+      "exam": 2,
+      "order_num": 9,
+      "text": "Столица Нидерландов",
+      "image": ""
+   }
+},
+{
+   "model": "quiz.question",
+   "pk": 13,
+   "fields": {
+      "create_timestamp": "2023-03-19T11:32:15.396Z",
+      "update_timestamp": "2023-03-19T11:32:15.396Z",
+      "exam": 2,
+      "order_num": 10,
+      "text": "Столица Франции",
+      "image": ""
+   }
+},
+{
+   "model": "quiz.question",
+   "pk": 14,
+   "fields": {
+      "create_timestamp": "2023-03-19T11:32:15.396Z",
+      "update_timestamp": "2023-03-19T11:32:15.396Z",
+      "exam": 2,
+      "order_num": 11,
+      "text": "Столица Болгарии",
+      "image": ""
+   }
+},
+{
+   "model": "quiz.question",
+   "pk": 15,
+   "fields": {
+      "create_timestamp": "2023-03-19T11:32:15.397Z",
+      "update_timestamp": "2023-03-19T11:32:15.397Z",
+      "exam": 2,
+      "order_num": 12,
+      "text": "Столица Венгрии",
+      "image": ""
+   }
+},
+{
+   "model": "quiz.question",
+   "pk": 16,
+   "fields": {
+      "create_timestamp": "2023-03-19T11:32:15.397Z",
+      "update_timestamp": "2023-03-19T11:32:15.397Z",
+      "exam": 2,
+      "order_num": 13,
+      "text": "Столица Молдавии",
+      "image": ""
+   }
+},
+{
+   "model": "quiz.question",
+   "pk": 17,
+   "fields": {
+      "create_timestamp": "2023-03-19T11:44:25.482Z",
+      "update_timestamp": "2023-03-19T11:50:48.774Z",
+      "exam": 3,
+      "order_num": 1,
+      "text": "Сколько Оскаров получил “Титаник (1997)”?",
+      "image": ""
+   }
+},
+{
+   "model": "quiz.question",
+   "pk": 18,
+   "fields": {
+      "create_timestamp": "2023-03-19T11:44:25.482Z",
+      "update_timestamp": "2023-03-19T11:50:30.435Z",
+      "exam": 3,
+      "order_num": 2,
+      "text": "В каком из этих фильмов Бенедикт Камбербэтч играет злодея?",
+      "image": ""
+   }
+},
+{
+   "model": "quiz.question",
+   "pk": 19,
+   "fields": {
+      "create_timestamp": "2023-03-19T11:44:25.483Z",
+      "update_timestamp": "2023-03-19T11:50:02.541Z",
+      "exam": 3,
+      "order_num": 3,
+      "text": "От роли в каком фильме отказался Уилл Смит?",
+      "image": ""
+   }
+},
+{
+   "model": "quiz.question",
+   "pk": 20,
+   "fields": {
+      "create_timestamp": "2023-03-19T11:44:25.483Z",
+      "update_timestamp": "2023-03-19T11:49:35.585Z",
+      "exam": 3,
+      "order_num": 4,
+      "text": "Как называется марка сигарет в фильмах Квентина Тарантино?",
+      "image": ""
+   }
+},
+{
+   "model": "quiz.question",
+   "pk": 21,
+   "fields": {
+      "create_timestamp": "2023-03-19T11:44:25.483Z",
+      "update_timestamp": "2023-03-19T11:49:08.153Z",
+      "exam": 3,
+      "order_num": 5,
+      "text": "В каком из этих фильмов играл Дэйн ДеХаан?",
+      "image": ""
+   }
+},
+{
+   "model": "quiz.question",
+   "pk": 22,
+   "fields": {
+      "create_timestamp": "2023-03-19T11:44:25.484Z",
+      "update_timestamp": "2023-03-19T11:48:22.141Z",
+      "exam": 3,
+      "order_num": 6,
+      "text": "Откуда родом главный герой фильма “Терминал”?",
+      "image": ""
+   }
+},
+{
+   "model": "quiz.question",
+   "pk": 23,
+   "fields": {
+      "create_timestamp": "2023-03-19T11:44:25.484Z",
+      "update_timestamp": "2023-03-19T11:47:58.335Z",
+      "exam": 3,
+      "order_num": 7,
+      "text": "Кем работал главный герой фильма “Умница Уилл Хантинг”?",
+      "image": ""
+   }
+},
+{
+   "model": "quiz.question",
+   "pk": 24,
+   "fields": {
+      "create_timestamp": "2023-03-19T11:44:25.484Z",
+      "update_timestamp": "2023-03-19T11:47:34.706Z",
+      "exam": 3,
+      "order_num": 8,
+      "text": "Где снимали четвертый эпизод “Звездных войн”?",
+      "image": ""
+   }
+},
+{
+   "model": "quiz.question",
+   "pk": 25,
+   "fields": {
+      "create_timestamp": "2023-03-19T11:44:25.485Z",
+      "update_timestamp": "2023-03-19T11:45:30.844Z",
+      "exam": 3,
+      "order_num": 9,
+      "text": "Первая темнокожая актриса, получившая Оскар:",
+      "image": ""
+   }
+},
+{
+   "model": "quiz.question",
+   "pk": 26,
+   "fields": {
+      "create_timestamp": "2023-03-19T11:44:25.485Z",
+      "update_timestamp": "2023-03-19T11:45:00.655Z",
+      "exam": 3,
+      "order_num": 10,
+      "text": "Какой из этих известных музыкантов играл в одной из частей “Пиратов Карибского моря”?",
+      "image": ""
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 1,
+   "fields": {
+      "question": 1,
+      "text": "5",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 2,
+   "fields": {
+      "question": 1,
+      "text": "4",
+      "is_correct": true
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 3,
+   "fields": {
+      "question": 2,
+      "text": "9",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 4,
+   "fields": {
+      "question": 2,
+      "text": "8",
+      "is_correct": true
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 5,
+   "fields": {
+      "question": 3,
+      "text": "7",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 6,
+   "fields": {
+      "question": 3,
+      "text": "6",
+      "is_correct": true
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 7,
+   "fields": {
+      "question": 4,
+      "text": "Зальцбург",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 8,
+   "fields": {
+      "question": 4,
+      "text": "Вена",
+      "is_correct": true
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 9,
+   "fields": {
+      "question": 4,
+      "text": "Грац",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 10,
+   "fields": {
+      "question": 5,
+      "text": "Гент",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 11,
+   "fields": {
+      "question": 5,
+      "text": "Брюссель",
+      "is_correct": true
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 12,
+   "fields": {
+      "question": 5,
+      "text": "Льеж",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 13,
+   "fields": {
+      "question": 6,
+      "text": "Лондон",
+      "is_correct": true
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 14,
+   "fields": {
+      "question": 6,
+      "text": "Брайтон",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 15,
+   "fields": {
+      "question": 6,
+      "text": "Манчестер",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 16,
+   "fields": {
+      "question": 7,
+      "text": "Берлин",
+      "is_correct": true
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 17,
+   "fields": {
+      "question": 7,
+      "text": "Кёльн",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 18,
+   "fields": {
+      "question": 7,
+      "text": "Гамбург",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 19,
+   "fields": {
+      "question": 8,
+      "text": "Корк",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 20,
+   "fields": {
+      "question": 8,
+      "text": "Дублин",
+      "is_correct": true
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 21,
+   "fields": {
+      "question": 8,
+      "text": "Брей",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 22,
+   "fields": {
+      "question": 9,
+      "text": "Мельс",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 23,
+   "fields": {
+      "question": 9,
+      "text": "Вадуц",
+      "is_correct": true
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 24,
+   "fields": {
+      "question": 9,
+      "text": "Бендерн",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 25,
+   "fields": {
+      "question": 10,
+      "text": "Дикирх",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 26,
+   "fields": {
+      "question": 10,
+      "text": "Люксембург",
+      "is_correct": true
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 27,
+   "fields": {
+      "question": 10,
+      "text": "Клерво",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 28,
+   "fields": {
+      "question": 11,
+      "text": "Монако",
+      "is_correct": true
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 29,
+   "fields": {
+      "question": 11,
+      "text": "Монте-Карло",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 30,
+   "fields": {
+      "question": 11,
+      "text": "Фонвьей",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 31,
+   "fields": {
+      "question": 12,
+      "text": "Утрехт",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 32,
+   "fields": {
+      "question": 12,
+      "text": "Амстердам",
+      "is_correct": true
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 33,
+   "fields": {
+      "question": 12,
+      "text": "Роттердам",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 34,
+   "fields": {
+      "question": 13,
+      "text": "Лион",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 35,
+   "fields": {
+      "question": 13,
+      "text": "Марсель",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 36,
+   "fields": {
+      "question": 13,
+      "text": "Париж",
+      "is_correct": true
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 37,
+   "fields": {
+      "question": 14,
+      "text": "София",
+      "is_correct": true
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 38,
+   "fields": {
+      "question": 14,
+      "text": "Бургас",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 39,
+   "fields": {
+      "question": 14,
+      "text": "Пловдив",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 40,
+   "fields": {
+      "question": 15,
+      "text": "Дебрецен",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 41,
+   "fields": {
+      "question": 15,
+      "text": "Будапешт",
+      "is_correct": true
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 42,
+   "fields": {
+      "question": 15,
+      "text": "Печ",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 43,
+   "fields": {
+      "question": 16,
+      "text": "Рыбница",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 44,
+   "fields": {
+      "question": 16,
+      "text": "Кишинев",
+      "is_correct": true
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 45,
+   "fields": {
+      "question": 16,
+      "text": "Тирасполь",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 46,
+   "fields": {
+      "question": 26,
+      "text": "Брендон Ури",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 47,
+   "fields": {
+      "question": 26,
+      "text": "Кит Ричардс",
+      "is_correct": true
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 48,
+   "fields": {
+      "question": 26,
+      "text": "Джон Леннон",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 49,
+   "fields": {
+      "question": 25,
+      "text": "Хэтти Макдэниел",
+      "is_correct": true
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 50,
+   "fields": {
+      "question": 25,
+      "text": "Холли Берри",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 51,
+   "fields": {
+      "question": 25,
+      "text": "Кэт Грэм",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 52,
+   "fields": {
+      "question": 24,
+      "text": "ОАЭ",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 53,
+   "fields": {
+      "question": 24,
+      "text": "Тунис",
+      "is_correct": true
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 54,
+   "fields": {
+      "question": 24,
+      "text": "Катар",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 55,
+   "fields": {
+      "question": 23,
+      "text": "Профессор университета",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 56,
+   "fields": {
+      "question": 23,
+      "text": "Уборщик",
+      "is_correct": true
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 57,
+   "fields": {
+      "question": 23,
+      "text": "Таксист",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 58,
+   "fields": {
+      "question": 22,
+      "text": "Кракожия",
+      "is_correct": true
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 59,
+   "fields": {
+      "question": 22,
+      "text": "Зааковия",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 60,
+   "fields": {
+      "question": 22,
+      "text": "Босния и Герцеговина",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 61,
+   "fields": {
+      "question": 21,
+      "text": "Достучаться до небес",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 62,
+   "fields": {
+      "question": 21,
+      "text": "Хроника",
+      "is_correct": true
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 63,
+   "fields": {
+      "question": 21,
+      "text": "По соображениям совести",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 64,
+   "fields": {
+      "question": 20,
+      "text": "Marlboro",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 65,
+   "fields": {
+      "question": 20,
+      "text": "Red Apple",
+      "is_correct": true
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 66,
+   "fields": {
+      "question": 20,
+      "text": "Chapman",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 67,
+   "fields": {
+      "question": 19,
+      "text": "Матрица",
+      "is_correct": true
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 68,
+   "fields": {
+      "question": 19,
+      "text": "Криминальное чтиво",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 69,
+   "fields": {
+      "question": 19,
+      "text": "Реальные кабаны",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 70,
+   "fields": {
+      "question": 18,
+      "text": "Доктор Стрэндж",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 71,
+   "fields": {
+      "question": 18,
+      "text": "Война токов",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 72,
+   "fields": {
+      "question": 18,
+      "text": "Стартрек: Возмездие",
+      "is_correct": true
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 73,
+   "fields": {
+      "question": 17,
+      "text": "5",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 74,
+   "fields": {
+      "question": 17,
+      "text": "7",
+      "is_correct": false
+   }
+},
+{
+   "model": "quiz.choice",
+   "pk": 75,
+   "fields": {
+      "question": 17,
+      "text": "11",
+      "is_correct": true
+   }
+}
+]
