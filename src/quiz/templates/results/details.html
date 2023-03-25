@@ -1,5 +1,7 @@
 {% extends 'base.html' %}
 
+{% load custom_tags %}
+
 {% block title %}
     Test result
 {% endblock %}
@@ -33,7 +35,23 @@
                     </tr>
                     <tr>
                         <td>Result</td>
-                        <td>{{ result.num_correct_answers }} / {{ result.num_incorrect_answers }}</td>
+                        <td>
+                            {% expression '%1 * 100 // %2' result.num_correct_answers result.exam.q_count as correct_level %}
+                            {% expression '100 - %1' correct_level as incorrect_level %}
+                            <div class="progress">
+                                <div class="progress-bar bg-success" role="progressbar" aria-label="Segment two"
+                                     style="width: {{ correct_level }}%" aria-valuenow="{{ correct_level }}"
+                                     aria-valuemin="0"
+                                     aria-valuemax="100">{{ correct_level }}%
+                                </div>
+                                <div class="progress-bar bg-danger" role="progressbar" aria-label="Segment one"
+                                     style="width: {{ incorrect_level }}%" aria-valuenow="{{ incorrect_level }}"
+                                     aria-valuemin="0"
+                                     aria-valuemax="100">{{ incorrect_level }}%
+                                </div>
+                            </div>
+                        </td>
+{#                        <td>{{ result.num_correct_answers }} / {{ result.num_incorrect_answers }}</td>#}
                     </tr>
                     </tbody>
                 </table>
@@ -42,8 +60,7 @@
         <div class="row">
             <div class="col-3"></div>
             <div class="col text-center">
-                <a class="btn btn-outline-primary m-3" href="{% url 'quiz:details' uuid=result.exam.uuid %}">Вернуться к
-                    тесту</a>
+                <a class="btn btn-outline-primary m-3" href="{% url 'quiz:details' uuid=result.exam.uuid %}">Back to test</a>
             </div>
             <div class="col-3"></div>
         </div>
