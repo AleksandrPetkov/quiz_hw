@@ -150,7 +150,7 @@ class ExamResultUpdateView(LoginRequiredMixin, UpdateView):
                 kwargs={
                     'uuid': uuid,
                     'res_uuid': res_uuid,
-                    # 'order_num': result.current_order_number + 1
+                    'order_num': result.current_order_number + 1
                 }
             )
         )

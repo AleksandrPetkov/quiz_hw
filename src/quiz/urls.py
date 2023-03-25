@@ -1,7 +1,6 @@
 from django.urls import path
-from django.views.generic import TemplateView
 
-from .views import ExamDetailView, ExamResultDetailView, ExamResultUpdateView, ExamResultDeleteView
+from .views import ExamDetailView, ExamResultDeleteView, ExamResultDetailView, ExamResultUpdateView
 from .views import ExamListView
 from .views import ExamResultCreateView
 from .views import ExamResultQuestionView
