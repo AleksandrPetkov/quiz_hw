@@ -9,10 +9,15 @@ services:
     volumes:
       - static_volume:/opt/src/static
       - media_volume:/opt/src/media
+    networks:
+      - frontend
+      - backend
     env_file:
       - .env_prod
     depends_on:
       db:
+        condition: service_healthy
+      cache:
         condition: service_healthy
     healthcheck:
       test: curl --fail -s http://localhost:8890 || exit 1
@@ -27,6 +32,8 @@ services:
     #image: sasha111108/db:0.0.1
     volumes:
       - db_data_volume:/var/lib/postgresql/data/
+    networks:
+      - backend
     env_file:
       - .env_prod
     healthcheck:
@@ -44,6 +51,8 @@ services:
     volumes:
       - static_volume:/opt/src/static
       - media_volume:/opt/src/media
+    networks:
+      - frontend
     ports:
       - '80:80'
     depends_on:
@@ -62,7 +71,9 @@ services:
     image: rabbitmq:3.9.12-alpine
     container_name: broker
     volumes:
-      - rabbit_volume:/var/lib/rabbitmq
+      - broker_volume:/var/lib/rabbitmq
+    networks:
+      - backend
     env_file:
       - .env_prod
     healthcheck:
@@ -76,10 +87,14 @@ services:
     build: .
     container_name: worker
     command: sh -c "celery -A core worker --concurrency=20 --loglevel=info"
+    networks:
+      - backend
     env_file:
       - .env_prod
     depends_on:
       broker:
+        condition: service_healthy
+      backend:
         condition: service_healthy
     restart: always
 
@@ -87,11 +102,43 @@ services:
     build: .
     container_name: scheduler
     command: sh -c "celery -A core beat -l info"
+    networks:
+      - backend
     env_file:
       - .env_prod
     depends_on:
       broker:
         condition: service_healthy
+      backend:
+        condition: service_healthy
+    restart: always
+
+  backend:
+    image: redis:6.2.6-alpine
+    container_name: backend
+    volumes:
+      - backend_volume:/data
+    networks:
+      - backend
+    healthcheck:
+      test: ["CMD", "redis-cli", "ping"]
+      interval: 5s
+      timeout: 30s
+      retries: 20
+    restart: always
+
+  cache:
+    image: redis:6.2.6-alpine
+    container_name: cache
+    volumes:
+      - cache_volume:/data
+    networks:
+      - backend
+    healthcheck:
+      test: [ "CMD", "redis-cli", "ping" ]
+      interval: 5s
+      timeout: 30s
+      retries: 20
     restart: always
 
 volumes:
@@ -101,6 +148,15 @@ volumes:
     name: quiz_static
   media_volume:
     name: quiz_media
-  rabbit_volume:
+  broker_volume:
     name: quiz_broker
+  backend_volume:
+    name: quiz_backend
+  cache_volume:
+    name: quiz_cache
 
+networks:
+  frontend:
+    driver: bridge
+  backend:
+    driver: bridge
